@@ -1,6 +1,8 @@
 @use '../../styles/variables' as *;
 @use '../../styles/_mixins' as *;
 
+
+
 .content {
   display: block;
   padding: 40px 100px;
@@ -10,6 +12,11 @@
   &_top {
     height: 100px;
     margin-bottom: $space-2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
 
     &_list{
       display: flex;
@@ -41,7 +48,23 @@
         background-color: $accent;
       }
     }
+
+    &_search {
+      background-color: $bg;
+      border-radius: $radius-lg;
+      border: 1px solid $accent;
+      padding: $space-2 $space-3;
+      font-size: 1rem;
+      color: var(--text);
+      &:focus{
+        outline: none;
+        border: 1px solid $accent;
+      }
+    }
+
   }
+
+
 
   &_title {
     margin: $space-2 0;

@@ -36,11 +36,13 @@ export type FiltersType = {
 interface FilterSliceState {
   filter: FiltersType;
   likedItems: Items[];
+  searchValue: string;
 }
 
 const initialState: FilterSliceState = {
   filter: { name: "Все элементы", filterProperty: "all" },
   likedItems: typeof window !== "undefined" ? loadLikedFromLocalStorage() : [],
+  searchValue: "",
 };
 
 export const filterSlice = createSlice({
@@ -70,6 +72,10 @@ export const filterSlice = createSlice({
       );
       saveLikedToLocalStorage(state.likedItems);
     },
+
+    setSearchValue(state, action: PayloadAction<string>) {
+      state.searchValue = action.payload;
+    },
   },
 });
 
@@ -80,5 +86,6 @@ export const selectIsLiked = (id: number) =>
     likedItems.some((item) => item.id === id),
   );
 
-export const { setFilterId, toggleLike, removeLikeById } = filterSlice.actions;
+export const { setFilterId, toggleLike, removeLikeById, setSearchValue } =
+  filterSlice.actions;
 export default filterSlice.reducer;
