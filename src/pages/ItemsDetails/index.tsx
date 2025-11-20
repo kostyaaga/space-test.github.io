@@ -3,10 +3,10 @@ import axios from "axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import style from "./ItemsDetails.module.scss";
-import type { Items } from "../../types/items.ts";
+import type { Items } from "../../types/items";
 
-import { useAppDispatch, useAppSelector } from "../../redux/store.ts";
-import { selectIsLiked, toggleLike } from "../../redux/slisec/filterSlice.ts";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+import { selectIsLiked, toggleLike } from "../../redux/slisec/filterSlice";
 
 import iconActiveHeart from "../../assets/img/active-heart.svg";
 import iconHeart from "../../assets/img/heart.svg";

@@ -5,7 +5,7 @@ interface Props {
   current: number;
   totalPages: number;
   onChange: (page: number) => void;
-  siblings?: number; // how many neighbors to show
+  siblings?: number;
 }
 
 const Pagination: React.FC<Props> = ({

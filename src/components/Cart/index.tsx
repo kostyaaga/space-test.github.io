@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "../Cart/Cart.module.scss";
+import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
+
+import type { Items } from "../../types/items";
+
+import { toggleLike, selectIsLiked } from "../../redux/slisec/filterSlice";
+import { deleteItem } from "../../redux/slisec/itemsSlice";
+
 import iconHeart from "../../assets/img/heart.svg";
 import iconActiveHeart from "../../assets/img/active-heart.svg";
 import iconDelete from "../../assets/img/delete.svg";
-import type { Items } from "../../types/items.ts";
-import { useAppDispatch, useAppSelector } from "../../redux/store.ts";
-import { toggleLike, selectIsLiked } from "../../redux/slisec/filterSlice.ts";
-import { Link } from "react-router-dom";
-import { deleteItem } from "../../redux/slisec/itemsSlice.ts";
 
 const Cart: React.FC<Items> = ({ id, imageUrl, title, description }) => {
   const isLiked = useAppSelector(selectIsLiked(id));

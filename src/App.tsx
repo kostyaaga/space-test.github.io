@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import Header from "./components/Header/idnex.tsx";
+import Header from "./components/Header/idnex";
 import Home from "./pages/Home";
 import ItemsDetails from "./pages/ItemsDetails";
 import CreateItem from "./pages/CreateItem";

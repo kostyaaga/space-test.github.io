@@ -1,19 +1,19 @@
 import React from "react";
 import styles from "./Home.module.scss";
 
-import { useAppDispatch, useAppSelector } from "../../redux/store.ts";
+import { useAppDispatch, useAppSelector } from "../../redux/store";
 import { useSelector } from "react-redux";
 import {
   type FiltersType,
   selectFilterState,
   setFilterId,
   setSearchValue,
-} from "../../redux/slisec/filterSlice.ts";
-import { fetchItems, selectItemsData } from "../../redux/slisec/itemsSlice.ts";
+} from "../../redux/slisec/filterSlice";
+import { fetchItems, selectItemsData } from "../../redux/slisec/itemsSlice";
 
 import Cart from "../../components/Cart";
-import type { Items } from "../../types/items.ts";
-import Skeleton from "../../components/Skeleton/index.tsx";
+import type { Items } from "../../types/items";
+import Skeleton from "../../components/Skeleton/index";
 import Pagination from "../../components/Pagination";
 
 const filters: FiltersType[] = [

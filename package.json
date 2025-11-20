@@ -1,5 +1,6 @@
 {
   "name": "test-react",
+  "homepage": "https://kostyaaga.github.io/space-test/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,12 +8,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@bytescale/upload-widget-react": "^4.19.0",
     "@reduxjs/toolkit": "^2.10.1",
     "axios": "^1.13.2",
+    "gh-pages": "^6.3.0",
     "pretier": "^0.0.1",
     "react": "^19.2.0",
     "react-content-loader": "^7.1.1",
