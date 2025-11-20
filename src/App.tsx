@@ -11,7 +11,7 @@ function App() {
     <>
       <Header></Header>
       <Routes>
-        <Route path="/space-test/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/create_item" element={<CreateItem />} />
         <Route path="/item/:id" element={<ItemsDetails />} />
         <Route path="*" element={<NotFound />} />
